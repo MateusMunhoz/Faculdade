@@ -9,12 +9,14 @@ int main(){
     printf("Insira o raio do circulo");
     scanf("%f", &R);
 
-    if(R < 0)
+    if(R > 0)
     {
-		printf("%f eh menor do que 0, resultado errado",R);
-	}
-	else{
-		float A = Pi * (R * R);
-    	printf("A area do circulo e igual a: %f", A);
+	    float A = Pi * (R * R);
+	    printf("A area do circulo e igual a: %f", A);
+		
+	}else{
+	    printf("%f eh menor do que 0, resultado errado",R);
+		
+    	
 	}
 }
