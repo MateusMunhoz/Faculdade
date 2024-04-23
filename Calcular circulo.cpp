@@ -1,25 +1,66 @@
-#include <stdio.h>
-
+#include <iostream>
 const float Pi = 3.14;
 
 
 
-int main(){
-    float R;
+
+
     
 
-
-	while(R >= 0){    //Sempre colocar i = 0 pq se n vai usar um valor aleatório da memória
+//Sempre colocar i = 0 pq se n vai usar um valor aleatório da memória
 		
-		printf("Insira o raio do circulo \n ");
-    	scanf("%f", &R);
+
+
+int main(){
+    float R;
+    int i;
+    int menu;
+    int a,b;
+    
+    
+    do{
+    	printf("\n 1 - Somar \n 2 - Area do circulo \n 3 - Sair \n");
+    	scanf("%d", &menu);
+    
+    
+    	switch (menu)
+    	{
     	
-		if(R > 0){
+    	case 1:
+    	{
+	   	
+        	printf("Insira os numeros que deseja somar separados por espaco \n");
+        	scanf("%d %d", &a,&b);
+        	printf("%d + %d = %d \n ", a,b, a+b);
+			
+			
+        	break;
+		}
+		
+    	case 2:
+    	{
+		
+    		printf("Insira o valor do raio(0 para sair): \n");
+    		scanf("%f", &R);
 			float A = Pi * (R * R);
-			printf("A area do circulo e igual a: %f \n", A);
+			printf("O valor da area do raio eh: %f \n", A);
+		
+		
+        	break;
+    	}
+    	
+    	case 3:
+    	{
+    		printf("Saindo do menu, paia \n");
+    		break;
 		}
-		else{
-			printf("%f eh menor do que 0, resultado invalido \n");
-		}
-	}
+		
+		default:
+			break;
+    } 
+    
+	}while(menu < 3);
+	
+    
 }
+ 
