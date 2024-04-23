@@ -6,11 +6,10 @@ const float Pi = 3.14;
 
 int main(){
     float R;
-	int i;
     
 
 
-	for(i = 0; i<3; i++){    //Sempre colocar i = 0 pq se n vai usar um valor aleatório da memória
+	while(R >= 0){    //Sempre colocar i = 0 pq se n vai usar um valor aleatório da memória
 		
 		printf("Insira o raio do circulo \n ");
     	scanf("%f", &R);
